@@ -1,0 +1,13 @@
+.main-nav-container {
+    margin: 0;
+    background-color: #950740;
+    padding: 20px;
+}
+
+.main-nav {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
