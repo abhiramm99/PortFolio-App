@@ -11,3 +11,16 @@
     justify-content: space-evenly;
 }
 
+.main-nav-items {
+    transition: transform 350ms;
+}
+
+.main-nav-items:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.current-tab {
+    fill: #fff;
+    filter: drop-shadow(3px 3px 2px yellow);
+}
