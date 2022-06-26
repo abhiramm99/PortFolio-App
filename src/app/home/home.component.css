@@ -6,3 +6,24 @@
 .main-heading {
     font-size: 3.5rem;
 }
+
+.home-container {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.left-side, .right-side {
+    width: 40vw;
+    padding: 10px;
+}
+
+.footer-text {
+    opacity: 0.4;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
