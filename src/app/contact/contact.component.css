@@ -59,7 +59,7 @@
 
 .right-panel {
     position: relative;
-    width: 500px;
+    min-width: 500px;
     height: 60%;
     display: flex;
     flex-direction: column;
@@ -97,4 +97,30 @@
 
 .social-links:hover {
     transform: scale(1.2);
+}
+
+@media screen and (max-width: 650px) {
+    .right-panel {
+        min-width: 250px;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .form-container {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .form-heading {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .form-heading {
+        font-size: 22px;
+    }
 }
