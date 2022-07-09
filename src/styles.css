@@ -9,6 +9,22 @@ body {
     background-color: #1A1A1D;
 }
 
+.border-top {
+    border-top: 1px solid lightgreen;
+}
+
+.border-bottom {
+    border-bottom: 1px solid lightgreen;
+}
+
+.icon-courtesy {
+    font-size: 12px;
+    position: absolute;
+    opacity: 0.3;
+    bottom: 5px;
+    right: 5px;
+}
+
 .spinner {
   width: 1.5rem;
   height: 1.5rem;

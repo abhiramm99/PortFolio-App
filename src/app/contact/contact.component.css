@@ -67,14 +67,6 @@
     align-items: center;
 }
 
-.icon-courtesy {
-    font-size: 12px;
-    position: absolute;
-    opacity: 0.3;
-    bottom: 5px;
-    right: 5px;
-}
-
 .right-panel-heading {
     text-align: center;
     margin-bottom: 20px;

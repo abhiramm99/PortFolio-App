@@ -11,6 +11,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { ContactComponent } from './contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ProgressBarComponent } from './shared-files/progress-bar/progress-bar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     ProjectsComponent,
     SkillsComponent,
     ExperienceComponent,
-    ContactComponent
+    ContactComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,
