@@ -8,7 +8,7 @@
 }
 
 .home-container {
-    height: 50vh;
+    height: 60vh;
     display: flex;
     align-items: flex-end;
     justify-content: space-evenly;
@@ -17,6 +17,23 @@
 .left-side, .right-side {
     width: 40vw;
     padding: 10px;
+}
+
+.right-side {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.my-photo {
+    border-radius: 115px;
+    transform: scale(0.7);
+    opacity: 0.7;
+}
+
+.welcome-text {
+    text-align: center;
+    padding-top: 20px;
 }
 
 .quick-links-container {
@@ -29,14 +46,68 @@
     justify-content: space-around;
 }
 
+.footer-text-container {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .footer-text {
     opacity: 0.4;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
     text-align: center;
+    margin: 0 20px;
 }
 
 .svg-icon {
     fill: #fff;
+}
+
+@media screen and (max-width: 500px) {
+    .footer-text {
+        font-size: 0.6em;
+    }
+
+    .footer-text-container {
+        justify-content: center;
+    }
+
+    .quick-links-container {
+        bottom: 50px;
+        width: 100%;
+        left: 0;
+    }
+
+    .left-side, .right-side {
+        width: 100%;
+    }
+
+    .right-side {
+        justify-content: center;
+    }
+
+    .home-container {
+        flex-direction: column-reverse;
+    }
+
+    .main-heading {
+        font-size: 2.5rem;
+    }
+
+    .sub-heading {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-height: 750px) {
+    .right-side {
+        margin-top: 20px;
+        height: 190px;
+    }
+
+    .home-container {
+        height: auto;
+    }
 }

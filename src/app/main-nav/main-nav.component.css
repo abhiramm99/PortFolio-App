@@ -2,6 +2,8 @@
     margin: 0;
     background-color: #950740;
     padding: 20px;
+    position: relative;
+    z-index: 9;
 }
 
 .main-nav {
