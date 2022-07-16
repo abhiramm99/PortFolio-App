@@ -5,7 +5,7 @@
             <input @fadeInFromTop class="form-field" type="text" placeholder="Enter your name.." formControlName="name">
             <input @fadeInFromTop class="form-field" type="text" placeholder="Enter your email.." formControlName="email">
             <textarea @fadeInFromTop class="form-field textarea" cols="30" rows="10" formControlName="message" placeholder="Enter your message.."></textarea>
-            <button class="send-button" (click)="ping()">
+            <button class="send-button" (click)="sendMessage()">
                 <span *ngIf="!isLoading && !isComplete">Send</span>
                 <div @fadeIn *ngIf="isLoading" class="spinner spinner-slow"></div>
                 <svg @popIn *ngIf="isComplete" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { fadeIn, fadeInFromTop, fadeOut, popIn } from '../shared-files/animations';
+import { ISendMessageRequestModel } from './contact.interface';
 import { ContactService } from './contact.service';
 
 @Component({
@@ -34,19 +35,24 @@ export class ContactComponent implements OnInit {
     })
   }
 
-  public ping(): void {
-    if (this.isLoading || this.isComplete) {
+  public sendMessage(): void {
+    if (this.isLoading || this.isComplete || !this.messageForm.valid) {
       return;
     }
 
     this.isLoading = true;
-    this.contactService.ping().subscribe(x => {
+    const sendModel: ISendMessageRequestModel = {
+      name: this.messageForm.value.name,
+      email: this.messageForm.value.email,
+      message: this.messageForm.value.message
+    };
+
+    this.contactService.sendMessage(sendModel).subscribe(x => {
       this.isLoading = false;
       this.isComplete = true;
       setTimeout(() => {
         this.isComplete = false;
       }, 1200);
-      console.log(x);
     })
   }
 

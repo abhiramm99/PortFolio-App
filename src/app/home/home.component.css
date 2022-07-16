@@ -111,3 +111,9 @@
         height: auto;
     }
 }
+
+@media screen and (max-height: 355px) {
+    .quick-links-container {
+        display: none;
+    }
+}
