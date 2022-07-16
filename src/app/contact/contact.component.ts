@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import { fadeIn, fadeInFromTop, fadeOut, popIn } from '../shared-files/animations';
 import { ISendMessageRequestModel } from './contact.interface';
 import { ContactService } from './contact.service';
@@ -21,7 +22,7 @@ export class ContactComponent implements OnInit {
   public isLoading: boolean = false;
   public isComplete: boolean = false;
 
-  constructor(private fb: FormBuilder, private contactService: ContactService) { }
+  constructor(private fb: FormBuilder, private contactService: ContactService, private toaster: ToastrService) { }
 
   ngOnInit(): void {
     this.messageForm = this.createForm();
@@ -52,8 +53,15 @@ export class ContactComponent implements OnInit {
       this.isComplete = true;
       setTimeout(() => {
         this.isComplete = false;
-      }, 1200);
+        this.messageForm.reset();
+      }, 5000);
+      this.toaster.success("I have received your message", "Thanks 😊");
+    }, () => {
+      this.isLoading = false;
+      this.isComplete = false;
+      this.messageForm.reset();
+      this.toaster.error("Your message is not delivered. Sorry 😟", "Uh oh. An error occured")
     })
   }
-
+  
 }

@@ -11,6 +11,6 @@ export class ContactService {
   constructor(private http: HttpClient) { }
 
   public sendMessage(sendModel: ISendMessageRequestModel): Observable<any> {
-    return this.http.post('https://localhost:7239/api/Messaging', sendModel);
+    return this.http.post('API_URL', sendModel);
   }
 }

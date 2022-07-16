@@ -12,6 +12,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProgressBarComponent } from './shared-files/progress-bar/progress-bar.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,11 @@ import { ProgressBarComponent } from './shared-files/progress-bar/progress-bar.c
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot({
+      timeOut: 5000,
+      positionClass: 'toast-bottom-left'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
