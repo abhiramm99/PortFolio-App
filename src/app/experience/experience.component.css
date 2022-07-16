@@ -1,0 +1,141 @@
+
+.exp-container {
+    margin: 20px 8px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exp-sections {
+    width: 40%;
+}
+
+.left {
+    color: #ccc;
+    padding: 0 25px 0 25px;;
+}
+
+.main-heading {
+    color: #cfa;
+    font-size: 2.5rem;
+    padding: 3px;
+}
+
+.left-text {
+    font-size: 1.4rem;
+}
+
+.left-bottom-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.coding-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 350px;
+    opacity: 0.5;
+}
+
+.right {
+    border-left: 2px solid #ccc;
+    padding-left: 20px;
+    width: 450px;
+    position: relative;
+}
+
+.exp-item {
+    padding: 10px 25px;
+    border: 2px solid #ccc;
+    border-radius: 14px;
+    width: 100%;
+    background-color: #cfa;
+    opacity: 0.9;
+    transition: box-shadow 200ms ease-in;
+}
+
+.exp-item::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #1A1A1D;
+    border: 3px solid #ddd;
+    position: absolute;
+    left: -9px;
+}
+
+.exp-item:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px 20px #9173fd;
+
+}
+
+.exp-item:active {
+    opacity: 1;
+}
+
+.company-logo {
+    padding: 10px;
+    text-align: right;
+}
+
+.card-main-title {
+    font-weight: 900;
+}
+
+.card-sub-title {
+    font-weight: 400;
+    opacity: 9;
+}
+
+.card-sub-sub-title {
+    font-weight: 200;
+    opacity: 8;
+    color: #383737;
+}
+
+@media screen and (max-width: 750px) {
+    .exp-container {
+        margin-top: 5px;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .left, .right {
+        width: 350px;
+    }
+
+    .left {
+        text-align: center;
+        border-bottom: 1px solid #cfa;
+        padding-bottom: 12px;
+    }
+
+    .right {
+        margin-top: 20px;
+    }
+
+    .left-text {
+        font-size: 19px;
+    }
+
+    .left-bottom-text {
+        font-size: 14px;
+    }
+
+    .coding-image {
+        width: 200px;
+    }
+
+}
+
+@media screen and (max-height: 725px) {
+
+    .coding-image {
+        width: 100px;
+    }
+}
