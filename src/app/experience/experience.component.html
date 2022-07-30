@@ -1,12 +1,12 @@
-<h2 class="main-heading">Professional Experiences</h2>
-<img class="coding-image" src="assets/images/coding_image.svg" alt="coding_image">
+<h2 @fadeInFromLeft class="main-heading">Professional Experiences</h2>
+<img @fadeInFromBottom class="coding-image" src="assets/images/coding_image.svg" alt="coding_image">
 <div class="exp-container">
-    <div class="exp-sections left">
+    <div @fadeInFromLeft class="exp-sections left">
         <p class="left-text">After graduating college from 2021, I started my software engineering career by mid 2021. Landed my first job through campus placements.</p>
         <p class="left-bottom-text">You can explore my career journey in the timeline. Click on a card for more details</p>
     </div>
     <div class="exp-sections right">
-        <div class="exp-item">
+        <div @fadeInFromRight class="exp-item" id="carestack" (click)="toggleDetailView(workedCompanies.CareStack)">
             <div class="company-logo">
                 <svg width="201" height="25" viewBox="0 0 201 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M76.5348 0.828125H94.58L94.0636 3.79025C93.899 5.0954 92.7982 6.11683 91.4533 6.1225H75.5248C74.3445 6.15655 73.3684 6.95666 73.062 8.04618L73.3968 6.1225L73.9245 3.14335C74.0834 1.8382 75.1843 0.828125 76.5348 0.828125Z" fill="#42BA78"/>
@@ -22,10 +22,40 @@
                     <path d="M155.157 23.7422L148.711 8.4833L145.312 0.414062L142.878 4.06281L129.781 23.7309V23.7366H135.813V23.7309H136.919L144.132 12.8981L148.705 23.7366L155.157 23.7422Z" fill="#05406B"/>
                 </svg>
             </div>
-            <h2 class="card-main-title">Full Stack Developer</h2>
-            <h3 class="card-sub-title">CareStack (Good Methods Software Solutions Pvt. Ltd.)</h3>
-            <h5 class="card-sub-title">August 2021 - Present</h5>
-            <h4 class="card-sub-sub-title">Angular 10+ | .NET Core | C# | TypeScript | HTML5 | CSS3 | SCSS</h4>
+            <ng-container *ngIf="!isCareStackDetailView">
+                <h2 class="card-main-title">Full Stack Developer</h2>
+                <h3 class="card-sub-title">CareStack (Good Methods Software Solutions Pvt. Ltd.)</h3>
+                <h5 class="card-sub-title">August 2021 - Present</h5>
+                <h4 class="card-sub-sub-title">Angular 10+ | .NET Core | C# | TypeScript | HTML5 | CSS3 | SCSS</h4>
+            </ng-container>
+            <ng-container *ngIf="isCareStackDetailView">
+                <p class="detail-view-paragraph">
+                    Currently working as a full-stack developer in an agile work enviornment. Work mainly focuses on translating business requirements of the company's product into code. Tasks include developing new features, functionalites and sub-products, implementing UI feedbacks, bug fixes and improvements, refactorings, code reviews and more.
+                </p>
+                <h3 class="detail-view-main-heading">Tech stack:</h3>
+                <h4>Front End</h4>
+                <ul class="detail-view-list">
+                    <li class="detail-view-list-item">Angular 12+</li>
+                    <li class="detail-view-list-item">TypeScript / JavaScript</li>
+                    <li class="detail-view-list-item">HTML5</li>
+                    <li class="detail-view-list-item">CSS3</li>
+                    <li class="detail-view-list-item">SCSS</li>
+                </ul>
+                <h4>Back End</h4>
+                <ul class="detail-view-list">
+                    <li class="detail-view-list-item">.NET Core 3+</li>
+                    <li class="detail-view-list-item">C#</li>
+                    <li class="detail-view-list-item">SQL Server</li>
+                    <li class="detail-view-list-item">MySql</li>
+                    <li class="detail-view-list-item">T-Sql</li>
+                </ul>
+                <h4>Other</h4>
+                <ul class="detail-view-list">
+                    <li class="detail-view-list-item">Microsoft Azure</li>
+                    <li class="detail-view-list-item">GitLab</li>
+                    <li class="detail-view-list-item">Jira</li>
+                </ul>
+            </ng-container>
         </div>
     </div>
 </div>

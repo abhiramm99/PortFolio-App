@@ -23,7 +23,7 @@ body {
 
 .icon-courtesy {
     font-size: 12px;
-    position: absolute;
+    position: fixed;
     opacity: 0.3;
     bottom: 5px;
     right: 5px;
