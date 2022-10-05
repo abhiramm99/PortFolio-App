@@ -14,7 +14,14 @@
 }
 
 .main-nav-items {
-    transition: transform 350ms;
+    transition: transform 200ms;
+}
+
+.main-nav-text {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .main-nav-items:hover {
@@ -22,7 +29,59 @@
     transform: scale(1.2);
 }
 
+.hamburger {
+    display: none;
+    width: min-content;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.lines {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 1.5px;
+    margin: 5px 0;
+    transition: all 200ms ease-in-out;
+}
+
 .current-tab {
-    fill: #fff;
-    filter: drop-shadow(3px 3px 2px yellow);
+    color: #1A1A1D;
+}
+
+@media screen and (max-width: 760px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .lines:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .lines:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.active .lines:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .main-nav {
+        position: fixed;
+        padding: 15px 0;
+        width: 100%;
+        flex-direction: column;
+        gap: 22px;
+        left: 0;
+        top: -215px;
+        background-color: #950740;
+        opacity: 0;
+        transition: all 300ms ease-in;
+    }
+
+    .main-nav.active {
+        opacity: 1;
+        top: 69px;
+    }
 }
